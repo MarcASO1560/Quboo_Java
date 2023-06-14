@@ -112,11 +112,25 @@ A la hora de aprender Swing, estuvimos mirando un video tutorial explicando much
 Y finalmente, durante los 2-3 meses que estuvimos haciendo todo esto, he podido acabar este proyecto con bastante éxito. Haciendo un programa sobre una libreria de distintos videojuegos hechos por mí:
 
 <p align="center">
-  <img src="img/loginfigma.png">
+  <img src="img/loginjava.png">
 </p>
 <p align="center">
-  <img src="img/registrerfigma.png">
+  <img src="img/registerjava.png">
 </p>
 <p align="center">
-  <img src="img/mainkrita.png">
+  <img src="img/mainjava.png">
+</p>
+<p align="center">
+  <img src="img/infojava.png">
+</p>
+<p align="center">
+  <img src="img/userjava.png">
+</p>
+
+---
+
+# Gracias por llegar hasta aquí :)
+
+<p align="center">
+  <img src="[img/userjava.png](https://i.pinimg.com/originals/15/e7/e3/15e7e300166c962d3b8a22f60b5cac9e.gif)">
 </p>
