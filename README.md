@@ -15,3 +15,8 @@ Para hacer mi programa, tenía pensado usar tanto Java como ![Python](https://ww
 
 Para elegir que videojuegos hacer, mi compañero ![CharlyMech](https://github.com/CharlyMech) hizo una ruleta rusa con la que se me asignaría crear los siguientes juegos:
 
+![Ruleta Rusa](img/wheel.gif)
+
+De los cuáles salieron victoriosos el **Pong**, el **Snake**, el **Pac-Man**, el **Jump-Man** y por último un **Typing test**.
+
+Para estos juegos, tenía pensado usar una librería bastante famosa de Python llamada ![PyGame](https://www.pygame.org/news). Aunque juegos como el **Snake**, el **Pac-Man** o el **Jump-Man**, los acabaría creando con otra librería de Python aún más potente que Pygame llamada ![Ursina](https://www.ursinaengine.org/).
