@@ -132,5 +132,5 @@ Y finalmente, durante los 2-3 meses que estuvimos haciendo todo esto, he podido 
 # Gracias por llegar hasta aquí :)
 
 <p align="center">
-  <img src="[img/userjava.png](https://i.pinimg.com/originals/15/e7/e3/15e7e300166c962d3b8a22f60b5cac9e.gif)">
+  <img src="https://i.pinimg.com/originals/15/e7/e3/15e7e300166c962d3b8a22f60b5cac9e.gif">
 </p>
