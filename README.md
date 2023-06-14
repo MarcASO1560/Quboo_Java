@@ -35,3 +35,67 @@ Con los que creé mis diseños tanto del inicio de sesión, como el registro de 
 <p align="center">
   <img width="700" height="350" src="img/mainkrita.png">
 </p>
+
+### Base de datos:
+Para la base de datos, tuve que hacer una maquina virtual con ![Ubuntu Server 22.04](https://ubuntu.com/download/server) para simular un servidor que me guardara los datos de la base de datos. Dentro del servidor instalé ![Apache 2](https://www.rccc.eu/calmed/Apache.html) para tener el servidor funcional, ![MySQL](https://www.mysql.com/) en sí, para crear y tener funcional la base de datos y ![PHPMyAdmin](https://www.phpmyadmin.net/) para poder tener un acceso más legible a la hora de ver las tablas de la base de datos.
+
+#### Aquí os dejo el código de la creación de mi base de datos:
+```sql
+CREATE DATABASE quboo;
+
+USE quboo;
+
+CREATE TABLE Rangos (
+    Id_rango INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre_rango VARCHAR(255),
+    Info_rango TEXT
+);
+
+CREATE TABLE Usuarios (
+    Id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre_usuario VARCHAR(255),
+    Contrasena_usuario VARCHAR(255),
+    Descripcion_usuario TEXT,
+    Monedas_juego INT DEFAULT 0,
+    Id_rango INT,
+    FOREIGN KEY (Id_rango) REFERENCES Rangos(Id_rango)
+);
+
+CREATE TABLE Juegos (
+    Id_juego INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre_juego VARCHAR(255),
+    Puntos_juego INT,
+    Comprado BIT,
+    Id_usuario INT,
+    FOREIGN KEY (Id_usuario) REFERENCES Usuarios(Id_usuario)
+);
+
+INSERT INTO Rangos (Nombre_rango, Info_rango) VALUES
+('Papel', 'Este es el nivel mas bajo...'),
+('Carton', 'Un nivel mas alto que papel.'),
+('Madera', 'Un nivel mas fuerte que carton.'),
+('Piedra', 'Un nivel mas resistente que madera.'),
+('Omnipotencia', 'Ahora mismo eres dios.');
+
+DELIMITER //
+CREATE TRIGGER asignar_rango_bajo
+BEFORE INSERT ON Usuarios
+FOR EACH ROW
+BEGIN
+   SET NEW.Id_rango = (SELECT MIN(Id_rango) FROM Rangos);
+END;//
+DELIMITER ;
+
+DELIMITER //
+CREATE TRIGGER crear_juegos_usuario
+AFTER INSERT ON Usuarios
+FOR EACH ROW
+BEGIN
+   INSERT INTO Juegos(Nombre_juego, Puntos_juego, Comprado, Id_usuario) VALUES ('pong', 0, 0, NEW.Id_usuario);
+   INSERT INTO Juegos(Nombre_juego, Puntos_juego, Comprado, Id_usuario) VALUES ('snake', 0, 0, NEW.Id_usuario);
+   INSERT INTO Juegos(Nombre_juego, Puntos_juego, Comprado, Id_usuario) VALUES ('pacman', 0, 0, NEW.Id_usuario);
+   INSERT INTO Juegos(Nombre_juego, Puntos_juego, Comprado, Id_usuario) VALUES ('jumpman', 0, 0, NEW.Id_usuario);
+   INSERT INTO Juegos(Nombre_juego, Puntos_juego, Comprado, Id_usuario) VALUES ('typingtest', 0, 0, NEW.Id_usuario);
+END;//
+DELIMITER ;
+```
