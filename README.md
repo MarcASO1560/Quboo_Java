@@ -99,3 +99,5 @@ BEGIN
 END;//
 DELIMITER ;
 ```
+#### Y aquí el modelo entidad relación:
+![Entidad Relación](img/entrel.png)
