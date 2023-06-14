@@ -30,7 +30,7 @@ Con los que creé mis diseños tanto del inicio de sesión, como el registro de 
   <img width="700" height="350" src="img/loginfigma.png">
 </p>
 <p align="center">
-  <img width="700" height="350" src="img/registerfigma.png">
+  <img width="700" height="350" src="img/registrerfigma.png">
 </p>
 <p align="center">
   <img width="700" height="350" src="img/mainkrita.png">
