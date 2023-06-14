@@ -93,7 +93,6 @@ class Player(Entity):
                             self.dy = 0
                             self.y = ground.y + ground.scale_y / 2 + self.scale_y / 2
                             break
-        
         if self.grounded:
             if ground is not self.current_ground:
                 self.score += 10
@@ -123,12 +122,13 @@ class Player(Entity):
         if abs(dist_2) > 30:
             bar_dead.y = lerp(bar_dead.y, self.y, 0.01)
     
-    def input(self):
-        if game_set == GAME_OVER:
-            add_score(self.score)
-            if self.score >= 500:
-                add_coin()
-            exit()
+    def input(self, key):
+        if key == 'q' or key == 'Q':
+            if game_set == GAME_OVER:
+                add_score(self.score)
+                if self.score >= 200:
+                    add_coin()
+                exit()
 
 player = Player()
 camera.position = (0, 5, -90)

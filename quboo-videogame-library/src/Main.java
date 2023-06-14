@@ -766,7 +766,22 @@ class MainFrame extends JFrame {
                         throw new RuntimeException(ex);
                     }
                 }
-
+                //Rangos
+                if (query.obtenerTotalPuntos(usuario)>=0 && query.obtenerTotalPuntos(usuario)< 500) {
+                    query.actualizarRango(usuario,1);
+                }
+                if (query.obtenerTotalPuntos(usuario)>=500 && query.obtenerTotalPuntos(usuario)< 1000) {
+                    query.actualizarRango(usuario,2);
+                }
+                if (query.obtenerTotalPuntos(usuario)>=1000 && query.obtenerTotalPuntos(usuario)< 1500) {
+                    query.actualizarRango(usuario,3);
+                }
+                if (query.obtenerTotalPuntos(usuario)>=1500 && query.obtenerTotalPuntos(usuario)< 2000) {
+                    query.actualizarRango(usuario,4);
+                }
+                if (query.obtenerTotalPuntos(usuario)>=2000) {
+                    query.actualizarRango(usuario,5);
+                }
                 if (e.getKeyCode()==KeyEvent.VK_ENTER && click_enter){
                     if (c1==1){
                         if (query.obtenerPongComprado(usuario) == 0) {

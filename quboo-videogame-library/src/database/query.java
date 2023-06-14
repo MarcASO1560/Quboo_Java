@@ -54,7 +54,7 @@ public class query {
         }
     }
     public static void CrearJugador(String username, String password) {
-        String query = "INSERT INTO Usuarios (Nombre_usuario,Contrasena_usuario,Descripcion_usuario,Monedas_juego) VALUES ('" + username + "', '" + password + "', 'Hi, im "+ username +".', 20)";
+        String query = "INSERT INTO Usuarios (Nombre_usuario,Contrasena_usuario,Descripcion_usuario,Monedas_juego) VALUES ('" + username + "', '" + password + "', 'Hi, im "+ username +".', 65)";
         try {
             Statement stmt = MainD.conection.createStatement();
             stmt.executeUpdate(query);
@@ -336,6 +336,20 @@ public class query {
 
             if (affectedRows > 0) {
                 System.out.println("Descripción actualizada con éxito.");
+            } else {
+                System.out.println("No se encontró el usuario con el nombre especificado.");
+            }
+        } catch (SQLException sqle) {
+            System.out.println("Error: " + sqle);
+        }
+    }
+    public static void actualizarRango(String username,Integer rangoid){
+        String query = "UPDATE Usuarios SET Id_rango = "+rangoid+" WHERE Nombre_usuario='"+username+"'";
+        try {
+            PreparedStatement stmt = MainD.conection.prepareStatement(query);
+            int affectedRows = stmt.executeUpdate();
+            if (affectedRows > 0) {
+                System.out.println("Rango cambiado con éxito.");
             } else {
                 System.out.println("No se encontró el usuario con el nombre especificado.");
             }
