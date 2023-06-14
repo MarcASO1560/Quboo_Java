@@ -26,3 +26,12 @@ Para estos juegos, tenía pensado usar una librería bastante famosa de Python l
 Una vez sabido qué juegos tenía que hacer. Pasé a plantear diseños de cómo deberían verse el inicio de sesión y el registro de usuarios. Por tanto, para el apartado artístico usé estas dos aplicaciones:
 <p align="center"><a href="https://krita.org/es/"><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Calligrakrita-base.svg" alt="krita" width="100" height="100"/></a><a href="https://www.figma.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/400px-Figma-logo.svg.png"alt="Figma" width="75" height="100"/></a></p>
 Con los que creé mis diseños tanto del inicio de sesión, como el registro de usuarios y como también cree mi programa central o main:
+<p align="center">
+  <img width="700" height="350" src="img/loginfigma.png">
+</p>
+<p align="center">
+  <img width="700" height="350" src="img/registerfigma.png">
+</p>
+<p align="center">
+  <img width="700" height="350" src="img/mainkrita.png">
+</p>
