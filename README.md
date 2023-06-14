@@ -101,3 +101,22 @@ DELIMITER ;
 ```
 #### Y aquí el modelo entidad relación:
 ![Entidad Relación](img/entrel.png)
+
+## Realización:
+Para programar lo que sería el programa principal de mi aplicación, he preferido usar la herramienta de ![Intelli-J](https://www.jetbrains.com/es-es/idea/), mientras que, por otra parte, para la realización del código de los juegos, me decanté por ![Visual Studio Code](https://code.visualstudio.com/).
+
+Durante el proceso de la creación del programa, una de las primeras dudas que tuve fué que no tenía ni idea de como iba a diseñar el panel principal, ya que no pensé que me fuera a complicar mucho... Pero estaba demasiado equivocado XD.
+
+A la hora de aprender Swing, estuvimos mirando un video tutorial explicando muchas cosas interesantes sobre la ![utilización de la librería](https://www.youtube.com/watch?v=Kmgo00avvEw&t) que realmente nos ayudó mucho. A mi sobretodo me ayudó a decidir cómo debía hacer mi programa, que era basicamente a mano, es decir, sin layout.
+
+Y finalmente, durante los 2-3 meses que estuvimos haciendo todo esto, he podido acabar este proyecto con bastante éxito. Haciendo un programa sobre una libreria de distintos videojuegos hechos por mí:
+
+<p align="center">
+  <img src="img/loginfigma.png">
+</p>
+<p align="center">
+  <img src="img/registrerfigma.png">
+</p>
+<p align="center">
+  <img src="img/mainkrita.png">
+</p>
